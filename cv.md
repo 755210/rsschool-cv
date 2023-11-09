@@ -1,3 +1,4 @@
+![logo](logo.png)
 # Andrey Shcherbakov
 * __Email__ 755210@gmail.com
 * __Discord__ Andrey (@755210)
@@ -10,7 +11,7 @@ Development according to customer requirements
 ## Code Examples
 ``` 1C: Enterprise
 // Процедура - Сравнить все
-// Для файлов перечисленных в таблицах открывает приложение ОткрытьWinMerge
+// Для файлов перечисленных в таблицах открывает приложение WinMerge
 &НаКлиенте
 Процедура СравнитьВсе()	
 	сч =0;	
