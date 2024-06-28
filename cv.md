@@ -44,4 +44,7 @@ Prosedure Compare()
 	EndDo;				
 EndProcedure
 ```
-
+## Education
+Novosibirsk State Technical University - (Computer Sience) Software Engineering
+## English Language 
+Elementary
