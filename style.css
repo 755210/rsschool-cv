@@ -1,2 +1,5 @@
-body {
-    color: grey; }
+* {
+    margin: right;
+    padding: 0;
+    box-sizing: border-box;
+}

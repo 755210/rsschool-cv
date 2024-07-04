@@ -1,10 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <header class="header">
+        <h1>Andrey Shcherbakov</h1>
+        <img src="logo.png" alt="Authors foto">
+        <nav>
+            <ul>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#self_introduction">Self-Introduction</a></li>
+                <li><a href="#skils">Skils</a></li>
+                <li><a href="#work_experience">Work Experience</a></li>
+                <li><a href="#code_examples">Code Examples</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#language">Language</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="" id="contact">
+            <h2>Contact</h2>
+            <ul>
+                <li>755210@gmail.com</li>
+                <li>Discord: Andrey (@755210)</li>
+            </ul>
+        </section>
+        <section class="" id="self_introduction">
+            <h2>Self-Introduction</h2>
+            <p>
+                My goals - professional development
+            </p>
+        </section>
+        <section class="" id="skils">
+            <h2>Skils</h2>
+            <p>
+                Tehnological platform 1C: Enterprise
+            </p>
+        </section>
+        <section class="" id="work_experience">
+            <h2>Work Experience</h2>
+            <p>
+                Development according to customer requirements
+            </p>
+        </section>
+        <section class="" id="code_examples">
+            <h2>Code Examples</h2>
+            <pre>
+                //1C: Enterprise code
+                // Prosedure - Compare
+                // For files listed in tables, opens the WinMerge application
+                <!--// &AtClient-->
+                Prosedure Compare()
+                i =0;
+                While True Do
+                    Strings1 = VT_Old.SearchStrings(New Structure("Number",i));
+                    Strings2 = VT_New.SearchStrings(New Structure("Number",i));
+                    If Strings1.Quantity() > 0 OR Strings2.Quantity() > 0 Then
+                        For = ?(Strings1.Quantity() > Strings2.Quantity(), Strings1.Quantity(), Strings2.Quantity());
+                        For y = 0 To For-1 Do
+                        If Strings1.Quantity() > 0 AND Strings1.Quantity() "&gt" y Then
+                            Str1 = Strings1[y].Path;
+                        Else
+                            Str1 = "";
+                        EndIf;
+                        If Strings2.Quantity() > 0 AND Strings2.Quantity() > y Then
+                            Str2 = Strings2[y].Path;
+                        Else
+                            Str2 = "";
+                        EndIf;
+                        If Str1 = "" AND Str2 = "" OR NOT (Strings1[y].ThereIsADifference AND Strings2[y].ThereIsADifference) Then
+                            Continue;
+                        EndIf;
+                        CommandString = PathWinMerge + " " + Str1 + " " + Str2;
+                        LaunchTheApplication(CommandString);
+                    Else
+                        Breack;
+                    EndIf;
+                    i = i + 1;
+                EndDo;
+                EndProcedure
+            </pre>
+        </section>
+        <section class="" id="education">
+            <h2>Education</h2>
+            <p>
+                Novosibirsk State Technical University - (Computer Sience) Software Engineering
+            </p>
+        </section>
+        <section class="" id="language">
+            <h2>Language</h2>
+            <p>
+                Russian, English - elementary
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p><a href="https://github.com/755210">github</a></p>
+        <p>2024</p>
+        <p><a href="https://wearecommunity.io/events/js-stage0-rs-2024q2"><img src="course_logo.png" alt="image coerse RS"></a></p>
+    </footer>
 </body>
+
 </html>
