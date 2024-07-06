@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="body_content">
+    <div class="content">
+        <header class="header_content">
+            <h1 class="header_content_items">Andrey Shcherbakov</h1>
+            <img class="header_content_items" src="logo.png" alt="Authors foto" width="123" height="113">
+            <nav class="nav_menu_content">
+                <ul class="nav_ul_menu_content">
+                    <li class="nav_menu_links_items"><a class="nav_menu_links_items_a" href="#contact">Contact</a></li>
+                    <li class="nav_menu_links_items"><a class="nav_menu_links_items_a"
+                            href="#self_introduction">Self-Introduction</a></li>
+                    <li class="nav_menu_links_items"><a class="nav_menu_links_items_a" href="#skils">Skils</a></li>
+                    <li class="nav_menu_links_items"><a class="nav_menu_links_items_a" href="#work_experience">Work
+                            Experience</a></li>
+                    <li class="nav_menu_links_items"><a class="nav_menu_links_items_a" href="#code_examples">Code
+                            Examples</a></li>
+                    <li class="nav_menu_links_items"><a class="nav_menu_links_items_a" href="#education">Education</a>
+                    </li>
+                    <li class="nav_menu_links_items"><a class="nav_menu_links_items_a" href="#language">Language</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main_content">
+
+            <section class="menu_items" id="contact">
+                <h2 class="menu_items_name">Contact</h2>
+                <ul>
+                    <li>755210@gmail.com</li>
+                    <li>Discord: Andrey (@755210)</li>
+                </ul>
+            </section>
+            <section class="menu_items" id="self_introduction">
+                <h2 class="menu_items_name">Self-Introduction</h2>
+                <p>My goals - professional development</p>
+            </section>
+            <section class="menu_items" id="skils">
+                <h2 class="menu_items_name">Skils</h2>
+                <p>Tehnological platform 1C: Enterprise</p>
+            </section>
+            <section class="menu_items" id="work_experience">
+                <h2 class="menu_items_name">Work Experience</h2>
+                <p>Development according to customer requirements</p>
+            </section>
+            <section class="menu_items" id="code_examples">
+                <h2 class="menu_items_name">Code Examples</h2>
+                <pre class="code_example">//1C: Enterprise code
+// Prosedure - Compare
+// For files listed in tables, opens the WinMerge application
+<!--// &AtClient-->
+Prosedure Compare()
+i =0;
+While True Do
+    Strings1 = VT_Old.SearchStrings(New Structure("Number",i));
+    Strings2 = VT_New.SearchStrings(New Structure("Number",i));
+    If Strings1.Quantity() > 0 OR Strings2.Quantity() &gt; 0 Then
+        For = ?(Strings1.Quantity() > Strings2.Quantity(), Strings1.Quantity(), Strings2.Quantity());
+        For y = 0 To For-1 Do
+        If Strings1.Quantity() > 0 AND Strings1.Quantity() &gt; y Then
+            Str1 = Strings1[y].Path;
+        Else
+            Str1 = "";
+        EndIf;
+        If Strings2.Quantity() > 0 AND Strings2.Quantity() &gt; y Then
+            Str2 = Strings2[y].Path;
+        Else
+            Str2 = "";
+        EndIf;
+        If Str1 = "" AND Str2 = "" OR NOT (Strings1[y].ThereIsADifference AND Strings2[y].ThereIsADifference) Then
+            Continue;
+        EndIf;
+        CommandString = PathWinMerge + " " + Str1 + " " + Str2;
+        LaunchTheApplication(CommandString);
+    Else
+        Breack;
+    EndIf;
+    i = i + 1;
+EndDo;
+EndProcedure</pre>
+            </section>
+            <section class="menu_items" id="education">
+                <h2 class="menu_items_name">Education</h2>
+                <p>Novosibirsk State Technical University - (Computer Sience) Software Engineering</p>
+            </section>
+            <section class="menu_items" id="language">
+                <h2 class="menu_items_name">Language</h2>
+                <p>Russian, English - elementary</p>
+            </section>
+
+        </main>
+
+        <footer class="footer_content">
+            <p class="footer_content_item"><a href="https://github.com/755210">My github</a></p>
+            <p class="footer_content_item"><a href="https://wearecommunity.io/events/js-stage0-rs-2024q2"><img
+                        src="course_logo.png" alt="image coerse RS" width="60" height="30"></a></p>
+            <p class="footer_content_item">2024</p>
+        </footer>
+    </div>
+</body>
+
+</html>
